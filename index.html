@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta Inicial - Técnico Instalador de Fibra Óptica</title>
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --primary-dark: #0a58ca;
+            --success: #198754;
+            --danger: #dc3545;
+            --bg-body: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #212529;
+            --border-color: #dee2e6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding: 12px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px 16px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 1.25rem;
+            margin-bottom: 6px;
+        }
+
+        header p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .section-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+
+        .section-title {
+            font-size: 0.95rem;
+            color: var(--primary);
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+
+        label.form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.92rem;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            background-color: #fff;
+            color: var(--text-main);
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+        }
+
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .custom-option {
+            display: flex;
+            align-items: center;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: #fdfdfd;
+            cursor: pointer;
+            font-size: 0.92rem;
+        }
+
+        .custom-option input {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            accent-color: var(--primary);
+        }
+
+        .actions-area {
+            margin-top: 24px;
+            margin-bottom: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .btn-whatsapp:active {
+            background-color: #1eb957;
+        }
+
+        .btn-clear {
+            background-color: transparent;
+            color: #6c757d;
+            border: 1px solid #6c757d;
+            font-weight: 500;
+            box-shadow: none;
+            font-size: 0.9rem;
+            padding: 8px;
+            margin-top: 8px;
+        }
+
+        .required {
+            color: var(--danger);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Encuesta Inicial de Candidatos</h1>
+        <p>Técnico Instalador de Fibra Óptica - San Luis Potosí</p>
+    </header>
+
+    <form id="encuestaForm">
+        <!-- SECCIÓN 1 -->
+        <div class="section-card">
+            <div class="section-title">1. Datos Generales</div>
+            <div class="form-group">
+                <label class="form-label">Nombre completo <span class="required">*</span></label>
+                <input type="text" id="nombre" placeholder="Ej. Juan Pérez López" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Edad</label>
+                <input type="number" id="edad" placeholder="Ej. 28">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Colonia o municipio donde radica</label>
+                <input type="text" id="ubicacion" placeholder="Ej. Soledad / Col. Prados">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Número de contacto</label>
+                <input type="text" id="telefono" placeholder="Ej. 444 123 4567">
+            </div>
+        </div>
+
+        <!-- SECCIÓN 2 -->
+        <div class="section-card">
+            <div class="section-title">2. Experiencia Laboral y Conocimientos</div>
+            <div class="form-group">
+                <label class="form-label">¿Cuánto tiempo tienes de experiencia en instalaciones de fibra óptica?</label>
+                <select id="expTiempo">
+                    <option value="Sin experiencia">Sin experiencia</option>
+                    <option value="Menos de 6 meses">Menos de 6 meses</option>
+                    <option value="De 6 meses a 1 año">De 6 meses a 1 año</option>
+                    <option value="Más de 1 año">Más de 1 año</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">¿En qué empresas o contratistas de instalaciones has trabajado anteriormente?</label>
+                <textarea id="empresas" rows="2" placeholder="Ej. Elecnor, Commsa, Carso, etc."></textarea>
+            </div>
+            <div class="form-group">
+                <label class="form-label">¿Estás o estuviste boletinado en alguna filial o contratista (Carso, KB Tel, u otros)?</label>
+                <div class="radio-group">
+                    <label class="custom-option"><input type="radio" name="boletinado" value="No" checked> No</label>
+                    <label class="custom-option"><input type="radio" name="boletinado" value="Sí (Carso / KB Tel)"> Sí (Carso / KB Tel)</label>
+                    <label class="custom-option"><input type="radio" name="boletinado" value="Sí (Otra empresa)"> Sí (Otra empresa)</label>
+                    <label class="custom-option"><input type="radio" name="boletinado" value="No estoy seguro / Aclarar"> No estoy seguro / Aclarar</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">¿Qué actividades realizabas? (Selecciona varias):</label>
+                <div class="checkbox-group">
+                    <label class="custom-option"><input type="checkbox" name="actividades" value="Instalaciones FTTH"> Instalaciones FTTH</label>
+                    <label class="custom-option"><input type="checkbox" name="actividades" value="Tendido de fibra óptica"> Tendido de fibra óptica</label>
+                    <label class="custom-option"><input type="checkbox" name="actividades" value="Conectorización y fusión"> Conectorización y fusión</label>
+                    <label class="custom-option"><input type="checkbox" name="actividades" value="Instalación de rosetas y ONT"> Instalación de rosetas y ONT</label>
+                    <label class="custom-option"><input type="checkbox" name="actividades" value="Atención de fallas y mantenimiento"> Atención de fallas y mantenimiento</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">¿Qué equipos de medición y herramientas de empalme dominas?</label>
+                <div class="checkbox-group">
+                    <label class="custom-option"><input type="checkbox" name="equiposMedicion" value="OTDR"> OTDR</label>
+                    <label class="custom-option"><input type="checkbox" name="equiposMedicion" value="Power Meter / VFL (Lápiz óptico)"> Power Meter / VFL (Lápiz óptico)</label>
+                    <label class="custom-option"><input type="checkbox" name="equiposMedicion" value="Empalmadora / Fusionadora"> Empalmadora / Fusionadora</label>
+                    <label class="custom-option"><input type="checkbox" name="equiposMedicion" value="Cortadora de precisión (Cleaver)"> Cortadora de precisión (Cleaver)</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 3 -->
+        <div class="section-card">
+            <div class="section-title">3. Seguridad, Movilidad y Licencia</div>
+            <div class="form-group">
+                <label class="form-label">¿Tienes experiencia en trabajo en alturas / postes y cuentas con constancia DC-3?</label>
+                <div class="radio-group">
+                    <label class="custom-option"><input type="radio" name="alturas" value="Sí, con experiencia y DC-3 vigente" checked> Sí, con experiencia y DC-3 vigente</label>
+                    <label class="custom-option"><input type="radio" name="alturas" value="Sí tengo experiencia, sin DC-3"> Sí tengo experiencia, sin DC-3</label>
+                    <label class="custom-option"><input type="radio" name="alturas" value="Sin experiencia en alturas"> Sin experiencia en alturas</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">¿Cuentas con licencia de conducir vigente?</label>
+                <div class="radio-group">
+                    <label class="custom-option"><input type="radio" name="licencia" value="Sí (Tipo A - Automovilista)" checked> Sí (Tipo A - Automovilista)</label>
+                    <label class="custom-option"><input type="radio" name="licencia" value="Sí (Tipo B - Chofer)"> Sí (Tipo B - Chofer)</label>
+                    <label class="custom-option"><input type="radio" name="licencia" value="Sí (Motociclista)"> Sí (Motociclista)</label>
+                    <label class="custom-option"><input type="radio" name="licencia" value="No tengo licencia / En trámite"> No tengo licencia / En trámite</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">¿Cuentas con herramienta propia para realizar instalaciones?</label>
+                <div class="radio-group">
+                    <label class="custom-option"><input type="radio" name="herramienta" value="Sí, completa" checked> Sí, completa</label>
+                    <label class="custom-option"><input type="radio" name="herramienta" value="Parcialmente"> Parcialmente</label>
+                    <label class="custom-option"><input type="radio" name="herramienta" value="No"> No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">¿Tienes vehículo o medio de transporte para trasladarte?</label>
+                <div class="radio-group">
+                    <label class="custom-option"><input type="radio" name="transporte" value="Sí, vehículo propio" checked> Sí, vehículo propio</label>
+                    <label class="custom-option"><input type="radio" name="transporte" value="Sí, otro medio (moto/público)"> Sí, otro medio (moto/público)</label>
+                    <label class="custom-option"><input type="radio" name="transporte" value="No"> No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">¿Tienes disponibilidad para trabajar en campo y desplazarte en SLP y alrededores?</label>
+                <div class="radio-group">
+                    <label class="custom-option"><input type="radio" name="disponibilidad" value="Sí" checked> Sí</label>
+                    <label class="custom-option"><input type="radio" name="disponibilidad" value="Con restricciones"> Con restricciones</label>
+                    <label class="custom-option"><input type="radio" name="disponibilidad" value="No"> No</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 4 -->
+        <div class="section-card">
+            <div class="section-title">4. Disponibilidad, Horarios y Sueldo</div>
+            <div class="form-group">
+                <label class="form-label">¿Tienes disponibilidad para rotar turnos o cubrir guardias en fin de semana?</label>
+                <div class="radio-group">
+                    <label class="custom-option"><input type="radio" name="guardias" value="Sí, disponibilidad completa" checked> Sí, disponibilidad completa</label>
+                    <label class="custom-option"><input type="radio" name="guardias" value="Solo en casos eventuales"> Solo en casos eventuales</label>
+                    <label class="custom-option"><input type="radio" name="guardias" value="No disponible"> No disponible</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">¿Cuál era tu último sueldo?</label>
+                <input type="text" id="sueldoAnterior" placeholder="Ej. $2,500 semanales">
+            </div>
+            <div class="form-group">
+                <label class="form-label">¿Cuánto buscas ganar?</label>
+                <input type="text" id="sueldoDeseado" placeholder="Ej. $3,000 semanales">
+            </div>
+            <div class="form-group">
+                <label class="form-label">¿Cuándo podrías incorporarte a trabajar?</label>
+                <input type="text" id="incorporacion" placeholder="Ej. Inmediata / En 3 días">
+            </div>
+            <div class="form-group">
+                <label class="form-label">¿Actualmente trabajas para alguna empresa de instalaciones?</label>
+                <div class="radio-group">
+                    <label class="custom-option"><input type="radio" name="trabajaActualmente" value="No" checked> No</label>
+                    <label class="custom-option"><input type="radio" name="trabajaActualmente" value="Sí"> Sí</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 5 -->
+        <div class="section-card">
+            <div class="section-title">5. Validación Laboral</div>
+            <div class="form-group">
+                <label class="form-label">¿Tienes algún impedimento contractual para incorporarte?</label>
+                <div class="radio-group">
+                    <label class="custom-option"><input type="radio" name="impedimento" value="No" checked> No</label>
+                    <label class="custom-option"><input type="radio" name="impedimento" value="Sí"> Sí</label>
+                    <label class="custom-option"><input type="radio" name="impedimento" value="Necesito aclararlo"> Necesito aclararlo</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">¿Puedes proporcionar referencias laborales?</label>
+                <div class="radio-group">
+                    <label class="custom-option"><input type="radio" name="referencias" value="Sí, cuento con 2 o 3 cartas de recomendación" checked> Sí, cuento con cartas de recomendación</label>
+                    <label class="custom-option"><input type="radio" name="referencias" value="Sí, puedo proporcionar contactos"> Sí, puedo proporcionar contactos</label>
+                    <label class="custom-option"><input type="radio" name="referencias" value="No por el momento"> No por el momento</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Observaciones adicionales (opcional)</label>
+                <textarea id="observaciones" rows="2" placeholder="Información adicional..."></textarea>
+            </div>
+        </div>
+
+        <!-- ACCIONES -->
+        <div class="actions-area">
+            <button type="button" class="btn btn-whatsapp" onclick="compartirWhatsApp()">
+                Compartir por WhatsApp
+            </button>
+            <button type="button" class="btn btn-clear" onclick="limpiarFormulario()">
+                Limpiar formulario
+            </button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function getRadioValue(name) {
+        const el = document.querySelector(`input[name="${name}"]:checked`);
+        return el ? el.value : 'No especificado';
+    }
+
+    function getCheckboxValues(name) {
+        const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+        const values = [];
+        checkboxes.forEach(cb => values.push(cb.value));
+        return values.length > 0 ? values.join(', ') : 'Ninguna seleccionada';
+    }
+
+    function compartirWhatsApp() {
+        const nombre = document.getElementById('nombre').value.trim();
+
+        if (!nombre) {
+            alert('Por favor ingresa al menos el Nombre Completo antes de compartir.');
+            document.getElementById('nombre').focus();
+            return;
+        }
+
+        const edad = document.getElementById('edad').value.trim() || 'No especificada';
+        const ubicacion = document.getElementById('ubicacion').value.trim() || 'No especificada';
+        const telefono = document.getElementById('telefono').value.trim() || 'No especificado';
+
+        const expTiempo = document.getElementById('expTiempo').value;
+        const empresas = document.getElementById('empresas').value.trim() || 'Ninguna especificada';
+        const boletinado = getRadioValue('boletinado');
+        const actividades = getCheckboxValues('actividades');
+        const equiposMedicion = getCheckboxValues('equiposMedicion');
+
+        const alturas = getRadioValue('alturas');
+        const licencia = getRadioValue('licencia');
+        const herramienta = getRadioValue('herramienta');
+        const transporte = getRadioValue('transporte');
+        const disponibilidad = getRadioValue('disponibilidad');
+
+        const guardias = getRadioValue('guardias');
+        const sueldoAnterior = document.getElementById('sueldoAnterior').value.trim() || 'No especificado';
+        const sueldoDeseado = document.getElementById('sueldoDeseado').value.trim() || 'No especificado';
+        const incorporacion = document.getElementById('incorporacion').value.trim() || 'No especificada';
+        const trabajaActualmente = getRadioValue('trabajaActualmente');
+
+        const impedimento = getRadioValue('impedimento');
+        const referencias = getRadioValue('referencias');
+        const observaciones = document.getElementById('observaciones').value.trim() || 'Sin observaciones';
+
+        let msj = `📋 *ENCUESTA TÉCNICO FIBRA ÓPTICA*\n\n`;
+        
+        msj += `👤 *1. DATOS GENERALES*\n`;
+        msj += `• *Nombre:* ${nombre}\n`;
+        msj += `• *Edad:* ${edad}\n`;
+        msj += `• *Ubicación:* ${ubicacion}\n`;
+        msj += `• *Teléfono:* ${telefono}\n\n`;
+
+        msj += `🛠 *2. EXPERIENCIA Y EQUIPOS*\n`;
+        msj += `• *Tiempo exp:* ${expTiempo}\n`;
+        msj += `• *Empresas previas:* ${empresas}\n`;
+        msj += `• *¿Boletinado?:* ${boletinado}\n`;
+        msj += `• *Actividades:* ${actividades}\n`;
+        msj += `• *Equipos que domina:* ${equiposMedicion}\n\n`;
+
+        msj += `🚗 *3. SEGURIDAD Y MOVILIDAD*\n`;
+        msj += `• *Alturas / DC-3:* ${alturas}\n`;
+        msj += `• *Licencia:* ${licencia}\n`;
+        msj += `• *Herramienta propia:* ${herramienta}\n`;
+        msj += `• *Transporte:* ${transporte}\n`;
+        msj += `• *Disp. campo SLP:* ${disponibilidad}\n\n`;
+
+        msj += `💰 *4. DISPONIBILIDAD Y SUELDO*\n`;
+        msj += `• *Guardias / Fin de sem:* ${guardias}\n`;
+        msj += `• *Sueldo anterior:* ${sueldoAnterior}\n`;
+        msj += `• *Sueldo deseado:* ${sueldoDeseado}\n`;
+        msj += `• *Incorporación:* ${incorporacion}\n`;
+        msj += `• *Trabaja actualmente:* ${trabajaActualmente}\n\n`;
+
+        msj += `📄 *5. VALIDACIÓN LABORAL*\n`;
+        msj += `• *Impedimentos:* ${impedimento}\n`;
+        msj += `• *Referencias:* ${referencias}\n`;
+        msj += `• *Obs:* ${observaciones}`;
+
+        if (navigator.share) {
+            navigator.share({
+                title: 'Encuesta Técnico Fibra Óptica',
+                text: msj
+            }).catch(() => {
+                window.open(`https://wa.me/?text=${encodeURIComponent(msj)}`, '_blank');
+            });
+        } else {
+            window.open(`https://wa.me/?text=${encodeURIComponent(msj)}`, '_blank');
+        }
+    }
+
+    function limpiarFormulario() {
+        if (confirm('¿Estás seguro de que deseas borrar todas las respuestas del formulario?')) {
+            document.getElementById('encuestaForm').reset();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
+</script>
+</body>
+</html>
