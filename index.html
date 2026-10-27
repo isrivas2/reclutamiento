@@ -55,6 +55,34 @@
             opacity: 0.9;
         }
 
+        /* BANNER DE ENLACES DE NAVEGACIÓN RÁPIDA */
+        .nav-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .nav-btn {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 10px 8px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            transition: background-color 0.2s;
+        }
+
+        .nav-btn:active {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
         .section-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -189,6 +217,16 @@
     <header>
         <h1>Encuesta Inicial de Candidatos</h1>
         <p>Técnico Instalador de Fibra Óptica - San Luis Potosí</p>
+        
+        <!-- NAVEGACIÓN A LOS OTROS DOS HTML -->
+        <div class="nav-links">
+            <a href="oferta-laboral.html" class="nav-btn">
+                💵 Oferta Laboral
+            </a>
+            <a href="documentacion.html" class="nav-btn">
+                📁 Documentación
+            </a>
+        </div>
     </header>
 
     <form id="encuestaForm">
@@ -254,7 +292,7 @@
                     <label class="custom-option"><input type="checkbox" name="equiposMedicion" value="OTDR"> OTDR</label>
                     <label class="custom-option"><input type="checkbox" name="equiposMedicion" value="Power Meter / VFL (Lápiz óptico)"> Power Meter / VFL (Lápiz óptico)</label>
                     <label class="custom-option"><input type="checkbox" name="equiposMedicion" value="Empalmadora / Fusionadora"> Empalmadora / Fusionadora</label>
-                    <label class="custom-option"><input type="checkbox" name="equiposMedicion" value="Cortadora de precisión (Cleaver)"> Cortadora de precisión (Cleaver)</label>
+                    <label class="custom-option"><input type="checkbox" name="equiposMedicion" value="Cortadora de precisión (Cleaver) y kit de conectorización"> Cortadora de precisión (Cleaver) y kit de conectorización</label>
                 </div>
             </div>
         </div>
@@ -435,7 +473,7 @@
         msj += `• *Empresas previas:* ${empresas}\n`;
         msj += `• *¿Boletinado?:* ${boletinado}\n`;
         msj += `• *Actividades:* ${actividades}\n`;
-        msj += `• *Equipos que domina:* ${equiposMedicion}\n\n`;
+        msj += `• *Equipos/Herramientas:* ${equiposMedicion}\n\n`;
 
         msj += `🚗 *3. SEGURIDAD Y MOVILIDAD*\n`;
         msj += `• *Alturas / DC-3:* ${alturas}\n`;
