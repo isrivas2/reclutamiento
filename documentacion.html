@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist de Documentación - Contratación</title>
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --success: #198754;
+            --bg-body: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #212529;
+            --border-color: #dee2e6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding: 12px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px 16px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 1.25rem;
+            margin-bottom: 4px;
+        }
+
+        header p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .section-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+
+        .section-title {
+            font-size: 0.95rem;
+            color: var(--primary);
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .doc-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 10px 0;
+            border-bottom: 1px solid #f1f3f5;
+        }
+
+        .doc-item:last-child {
+            border-bottom: none;
+        }
+
+        .doc-item input[type="checkbox"] {
+            width: 22px;
+            height: 22px;
+            margin-right: 12px;
+            margin-top: 2px;
+            accent-color: var(--success);
+        }
+
+        .doc-info label {
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+
+        .doc-info p {
+            font-size: 0.82rem;
+            color: #6c757d;
+            margin-top: 2px;
+        }
+
+        .btn-whatsapp {
+            width: 100%;
+            padding: 14px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: 16px;
+            margin-bottom: 24px;
+        }
+
+        .input-candidato {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Documentación Prioritaria</h1>
+        <p>Requisitos de Ingreso - Técnico Instalador</p>
+    </header>
+
+    <div class="section-card">
+        <label style="font-weight: 600; font-size: 0.9rem; display:block; margin-bottom: 6px;">Nombre del Candidato:</label>
+        <input type="text" id="nombreCandidato" class="input-candidato" placeholder="Ingresa tu nombre completo">
+    </div>
+
+    <div class="section-card">
+        <div class="section-title">1. Referencias Laborales</div>
+        <div class="doc-item">
+            <input type="checkbox" id="doc_cartas" value="Cartas de recomendación laboral (2 o 3)">
+            <div class="doc-info">
+                <label for="doc_cartas">Cartas de recomendación (2 o 3)</label>
+                <p>Preferentemente de telecomunicaciones. Debe incluir puesto, periodo laborado, teléfono y nombre del responsable.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-card">
+        <div class="section-title">2. Identificación y Registros</div>
+        <div class="doc-item">
+            <input type="checkbox" id="doc_ine" value="INE vigente">
+            <div class="doc-info"><label for="doc_ine">Identificación oficial vigente (INE)</label></div>
+        </div>
+        <div class="doc-item">
+            <input type="checkbox" id="doc_curp" value="CURP actualizada">
+            <div class="doc-info"><label for="doc_curp">CURP actualizada</label></div>
+        </div>
+        <div class="doc-item">
+            <input type="checkbox" id="doc_rfc" value="RFC y Constancia de Situación Fiscal">
+            <div class="doc-info"><label for="doc_rfc">RFC y Constancia de Situación Fiscal (actualizada)</label></div>
+        </div>
+        <div class="doc-item">
+            <input type="checkbox" id="doc_nss" value="Número de Seguridad Social (NSS)">
+            <div class="doc-info"><label for="doc_nss">Número de Seguridad Social (NSS)</label></div>
+        </div>
+    </div>
+
+    <div class="section-card">
+        <div class="section-title">3. Documentos Personales y Escolares</div>
+        <div class="doc-item">
+            <input type="checkbox" id="doc_acta" value="Acta de nacimiento">
+            <div class="doc-info"><label for="doc_acta">Acta de nacimiento</label></div>
+        </div>
+        <div class="doc-item">
+            <input type="checkbox" id="doc_domicilio" value="Comprobante de domicilio reciente">
+            <div class="doc-info"><label for="doc_domicilio">Comprobante de domicilio reciente</label></div>
+        </div>
+        <div class="doc-item">
+            <input type="checkbox" id="doc_estudios" value="Comprobante de estudios">
+            <div class="doc-info"><label for="doc_estudios">Comprobante de estudios</label></div>
+        </div>
+    </div>
+
+    <div class="section-card">
+        <div class="section-title">4. Documentación Operativa y Nómina</div>
+        <div class="doc-item">
+            <input type="checkbox" id="doc_banco" value="Carátula bancaria a su nombre">
+            <div class="doc-info">
+                <label for="doc_banco">Carátula bancaria con cuenta a su nombre</label>
+                <p>Para el depósito semanal de nómina.</p>
+            </div>
+        </div>
+        <div class="doc-item">
+            <input type="checkbox" id="doc_licencia" value="Licencia de conducir vigente">
+            <div class="doc-info"><label for="doc_licencia">Licencia de conducir vigente</label></div>
+        </div>
+        <div class="doc-item">
+            <input type="checkbox" id="doc_cv" value="Solicitud de empleo o CV">
+            <div class="doc-info"><label for="doc_cv">Solicitud de empleo elaborada o Currículum Vitae</label></div>
+        </div>
+    </div>
+
+    <button type="button" class="btn-whatsapp" onclick="enviarChecklist()">
+        📲 Enviar estatus de documentos por WhatsApp
+    </button>
+</div>
+
+<script>
+    function enviarChecklist() {
+        const nombre = document.getElementById('nombreCandidato').value.trim() || 'Candidato sin nombre';
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        let completados = [];
+        let pendientes = [];
+
+        checkboxes.forEach(cb => {
+            if (cb.checked) {
+                completados.push("✅ " + cb.value);
+            } else {
+                pendientes.push("❌ " + cb.value);
+            }
+        });
+
+        let msj = `📁 *ESTATUS DE DOCUMENTACIÓN*\n`;
+        msj += `👤 *Candidato:* ${nombre}\n\n`;
+
+        if (completados.length > 0) {
+            msj += `*DOCUMENTOS LISTOS (${completados.length}/${checkboxes.length}):*\n` + completados.join('\n') + `\n\n`;
+        }
+
+        if (pendientes.length > 0) {
+            msj += `*DOCUMENTOS PENDIENTES:*\n` + pendientes.join('\n');
+        }
+
+        if (navigator.share) {
+            navigator.share({ title: 'Documentación de Candidato', text: msj })
+            .catch(() => window.open(`https://wa.me/?text=${encodeURIComponent(msj)}`, '_blank'));
+        } else {
+            window.open(`https://wa.me/?text=${encodeURIComponent(msj)}`, '_blank');
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beneficios y Condiciones Laborales - Técnico Instalador</title>
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --success: #198754;
+            --bg-body: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #212529;
+            --border-color: #dee2e6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding: 12px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px 16px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 1.3rem;
+            margin-bottom: 4px;
+        }
+
+        header p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .card-icon {
+            font-size: 1.5rem;
+            line-height: 1;
+            background: #e7f1ff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .card-content h3 {
+            font-size: 1rem;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .card-content p {
+            font-size: 0.92rem;
+            color: #495057;
+        }
+
+        .badge-commission {
+            background-color: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 16px 0;
+            text-align: center;
+        }
+
+        .badge-commission h4 {
+            color: var(--success);
+            font-size: 1.05rem;
+            margin-bottom: 4px;
+        }
+
+        .badge-commission p {
+            font-size: 0.9rem;
+            color: #2e7d32;
+        }
+
+        .btn-whatsapp {
+            width: 100%;
+            padding: 14px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: 16px;
+            margin-bottom: 24px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Propuesta Laboral y Beneficios</h1>
+        <p>Técnico Instalador de Fibra Óptica - San Luis Potosí</p>
+    </header>
+
+    <div class="card">
+        <div class="card-icon">💵</div>
+        <div class="card-content">
+            <h3>Sueldo Base Garantizado</h3>
+            <p><strong>$1,500 MXN semanales</strong> libres con pago puntual todos los fines de semana.</p>
+        </div>
+    </div>
+
+    <div class="badge-commission">
+        <h4>🚀 Comisiones Sin Tope</h4>
+        <p><strong>$300 MXN extras</strong> por cada instalación realizada a partir de la 5ª instalación semanal.</p>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">🚗</div>
+        <div class="card-content">
+            <h3>Vehículo de Trabajo</h3>
+            <p>Unidad equipada y acondicionada para el desarrollo de las labores en campo.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">⛽</div>
+        <div class="card-content">
+            <h3>Apoyo de Gasolina</h3>
+            <p><strong>$800 MXN semanales</strong> asignados exclusivamente para desplazamientos operativos.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">🧰</div>
+        <div class="card-content">
+            <h3>Herramientas y Equipamiento</h3>
+            <p>Empalmadora, OTDR, Power Meter y kit completo proporcionados por la empresa.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">🛡️</div>
+        <div class="card-content">
+            <h3>Seguridad Social y EPP</h3>
+            <p>Alta inmediata en el <strong>IMSS</strong> y entrega de Equipo de Protección Personal completo (casco, arnés, botas).</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">📅</div>
+        <div class="card-content">
+            <h3>Esquema de Pago</h3>
+            <p>Pagos semanales conforme a las condiciones y resultados operativos acordados.</p>
+        </div>
+    </div>
+
+    <a href="#" class="btn-whatsapp" onclick="compartirDudas()">
+        💬 Consultar dudas por WhatsApp
+    </a>
+</div>
+
+<script>
+    function compartirDudas() {
+        const msj = "Hola, me interesa la propuesta laboral de Técnico Instalador de Fibra Óptica y quisiera más información sobre el proceso de ingreso.";
+        if (navigator.share) {
+            navigator.share({ title: 'Propuesta Laboral', text: msj })
+            .catch(() => window.open(`https://wa.me/?text=${encodeURIComponent(msj)}`, '_blank'));
+        } else {
+            window.open(`https://wa.me/?text=${encodeURIComponent(msj)}`, '_blank');
+        }
+    }
+</script>
+</body>
+</html>
