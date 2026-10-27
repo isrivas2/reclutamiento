@@ -53,6 +53,33 @@
             opacity: 0.9;
         }
 
+        .nav-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .nav-btn {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 10px 8px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            transition: background-color 0.2s;
+        }
+
+        .nav-btn:active {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
         .section-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -138,6 +165,11 @@
     <header>
         <h1>Documentación Prioritaria</h1>
         <p>Requisitos de Ingreso - Técnico Instalador</p>
+        
+        <div class="nav-links">
+            <a href="index.html" class="nav-btn">📋 Ir a Encuesta</a>
+            <a href="oferta-laboral.html" class="nav-btn">💵 Oferta Laboral</a>
+        </div>
     </header>
 
     <div class="section-card">
